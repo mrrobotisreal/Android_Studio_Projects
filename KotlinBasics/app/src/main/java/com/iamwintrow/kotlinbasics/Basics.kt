@@ -2,6 +2,6 @@ package com.iamwintrow.kotlinbasics
 
 fun main() {
     var myName = "Mitchell"
-    myName += " Wintrow"
-    print("Hello $myName!")
+    val myLastName = "Wintrow"
+    print("Hello $myName $myLastName!")
 }
