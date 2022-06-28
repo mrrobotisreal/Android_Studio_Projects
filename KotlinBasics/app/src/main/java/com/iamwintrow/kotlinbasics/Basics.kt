@@ -28,8 +28,13 @@ fun main() {
     isSunny = false
 
     // Chars
-    val letterChar = 'A'
-    val digitChar = '1'
+    val letterChar: Char = 'A'
+    val digitChar: Char = '1'
 
-    print("Hello $myName $myLastName!")
+    // Strings
+    val myStr: String = "Hello World"
+    var firstCharInStr: Char = myStr[0]
+    var lastCharInStr: Char = myStr[myStr.length - 1]
+
+    print("Hello $myName $myLastName! First is $firstCharInStr and Last is $lastCharInStr.")
 }
