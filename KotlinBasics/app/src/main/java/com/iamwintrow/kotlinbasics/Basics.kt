@@ -22,5 +22,14 @@ fun main() {
     // Floating Point number types: Float (32 bit), Double (64 bit)
     val myFloat: Float = 13.37F
     val myDouble: Double = 3.14159265358979323846
+
+    // Booleans
+    var isSunny: Boolean = true
+    isSunny = false
+
+    // Chars
+    val letterChar = 'A'
+    val digitChar = '1'
+
     print("Hello $myName $myLastName!")
 }
