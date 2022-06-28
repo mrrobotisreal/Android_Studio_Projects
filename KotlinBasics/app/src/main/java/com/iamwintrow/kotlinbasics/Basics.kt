@@ -37,4 +37,5 @@ fun main() {
     var lastCharInStr: Char = myStr[myStr.length - 1]
 
     print("Hello $myName $myLastName! First is $firstCharInStr and Last is $lastCharInStr.")
+    print("The length of myName is ${myName.length}")
 }
