@@ -49,4 +49,15 @@ fun main() {
     } else {
         println("use technique")
     }
+
+    var name = "Bond"
+
+    when (name) {
+        "Mitchell" -> println("Hello Mitchell!")
+        "Bond" -> println("My name is Bond, James Bond")
+        "Rawr" -> println("Um, that's not a name...")
+        else -> {
+            println("Hello anonymous person")
+        }
+    }
 }
