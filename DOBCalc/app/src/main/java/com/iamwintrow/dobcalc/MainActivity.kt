@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        title = "Age In Minutes"
 
         val btnDatePicker : Button = findViewById(R.id.btnDatePicker)
         tvSelectedDate = findViewById<TextView>(R.id.tvSelectedDate)
