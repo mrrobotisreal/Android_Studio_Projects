@@ -36,6 +36,17 @@ fun main() {
     var firstCharInStr: Char = myStr[0]
     var lastCharInStr: Char = myStr[myStr.length - 1]
 
-    print("Hello $myName $myLastName! First is $firstCharInStr and Last is $lastCharInStr.")
-    print("The length of myName is ${myName.length}")
+    println("Hello $myName $myLastName! First is $firstCharInStr and Last is $lastCharInStr.")
+    println("The length of myName is ${myName.length}")
+
+    var heightPerson1 = 170
+    var heightPerson2 = 189
+
+    if (heightPerson1 > heightPerson2) {
+        println("use raw force")
+    } else if (heightPerson1 == heightPerson2) {
+        println("head to head battle")
+    } else {
+        println("use technique")
+    }
 }
