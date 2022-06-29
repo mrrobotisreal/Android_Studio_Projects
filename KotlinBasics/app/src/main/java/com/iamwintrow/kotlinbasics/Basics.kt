@@ -69,4 +69,12 @@ fun main() {
         12, 1, 2 -> println("Winter")
         else -> println("Invalid Season")
     }
+
+    var x: Any = "13.37"
+    when (x) {
+        is Int -> println("$x is an Int")
+        !is Double -> println("$x is a Double")
+        is String -> println("$x is a String")
+        else -> println("$x is none of the above")
+    }
 }
