@@ -2,6 +2,10 @@ package com.iamwintrow.myquizapp
 
 object Constants {
 
+    const val USER_NAME : String = "user_name"
+    const val TOTAL_QUESTIONS : String = "total_questions"
+    const val  CORRECT_ANSWERS : String = "correct_answers"
+
     fun getQuestions(): ArrayList<Question>{
         val questionsList = ArrayList<Question>()
 
@@ -114,6 +118,41 @@ object Constants {
             4
         )
         questionsList.add(qu10)
+
+        val qu11 = Question(
+            11, "What does this say?",
+            R.drawable.chinese_one,
+            "Nice to meet you",
+            "Today is beautiful",
+            "8 in the evening",
+            "I am a wheelbarrow",
+            3
+        )
+        questionsList.add(qu11)
+
+        val qu12 = Question(
+            12, "What does this say?",
+            R.drawable.chinese_two,
+            "What time is your flight?",
+            "What is the weather like?",
+            "Can you spare some change?",
+            "Are you a human?",
+            1
+        )
+        questionsList.add(qu12)
+
+        val qu13 = Question(
+            13, "What does this say?",
+            R.drawable.chinese_three,
+            "No, I am not going home",
+            "Okay, I'll go with you",
+            "Um, get away from me",
+            "Yes (Correct), I am going home",
+            4
+        )
+        questionsList.add(qu13)
+
+
 
         return questionsList
     }
