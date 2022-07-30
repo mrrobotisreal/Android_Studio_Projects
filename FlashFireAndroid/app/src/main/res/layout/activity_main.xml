@@ -94,9 +94,10 @@
                     android:layout_margin="12dp"
                     />
                 <TextView
+                    android:id="@+id/register_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Want to sign Up? Click here"
+                    android:text="Want to register? Click here"
                     android:layout_marginTop="16dp"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -113,7 +114,7 @@
 <!--                android:textColor="@color/white"-->
 <!--                android:textSize="18sp"/>-->
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttonExploreAll"
+                android:id="@+id/login_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
