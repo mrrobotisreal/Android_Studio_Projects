@@ -1,10 +1,12 @@
 package com.iamwintrow.flashfire_android
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.UnderlineSpan
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 
@@ -21,26 +23,40 @@ class MainActivity : AppCompatActivity() {
         underLineMainTitle()
         setEventHearerOnLoginButton()
         setEventHearerOnRegisterButton()
+
     }
 
-    fun underLineMainTitle() {
+    private fun underLineMainTitle() {
         textView = findViewById(R.id.main_title)
         mainTitleString = SpannableString(textView.text)
         mainTitleString.setSpan(UnderlineSpan(), 0, mainTitleString.length, 0)
         textView.text = mainTitleString
     }
 
-    fun setEventHearerOnLoginButton() {
+    private fun setEventHearerOnLoginButton() {
+        val username : EditText = findViewById(R.id.username)
+        val password : EditText = findViewById(R.id.password)
         appCompatButton = findViewById(R.id.login_button)
         appCompatButton.setOnClickListener {
-            val toast = Toast.makeText(applicationContext, "You logged in sucka!!!", Toast.LENGTH_LONG).show()
+            if (username.text.isEmpty()) {
+                Toast.makeText(this, "Please enter your username", Toast.LENGTH_LONG).show()
+            } else if (password.text.isEmpty()) {
+                Toast.makeText(this, "Please enter your password", Toast.LENGTH_LONG).show()
+            } else {
+                val intent = Intent(this, MainMenuActivity::class.java)
+                intent.putExtra(Constants.USER_NAME, username.text.toString())
+                startActivity(intent)
+                finish()
+            }
         }
     }
 
-    fun setEventHearerOnRegisterButton() {
+    private fun setEventHearerOnRegisterButton() {
         registerButton = findViewById(R.id.register_button)
         registerButton.setOnClickListener {
-            val toast = Toast.makeText(applicationContext, "Thanks for registering!", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, SignUpPage::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }
