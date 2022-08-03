@@ -20,17 +20,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        underLineMainTitle()
         setEventHearerOnLoginButton()
         setEventHearerOnRegisterButton()
 
-    }
-
-    private fun underLineMainTitle() {
-        textView = findViewById(R.id.main_title)
-        mainTitleString = SpannableString(textView.text)
-        mainTitleString.setSpan(UnderlineSpan(), 0, mainTitleString.length, 0)
-        textView.text = mainTitleString
     }
 
     private fun setEventHearerOnLoginButton() {
@@ -43,6 +35,16 @@ class MainActivity : AppCompatActivity() {
             } else if (password.text.isEmpty()) {
                 Toast.makeText(this, "Please enter your password", Toast.LENGTH_LONG).show()
             } else {
+                val db = DBHelper(this, null)
+
+                val cursor = db.validateUser()
+                cursor!!.moveToFirst()
+
+//                Toast.makeText(this, cursor.getString(cursor.getColumnIndex(DBHelper.NAME_COl)) + "\n" +
+//                    cursor.getString(cursor.getColumnIndex(DBHelper.EMAIL_COL)), Toast.LENGTH_LONG).show()
+//
+//                System.out.println(cursor.getString(cursor.getColumnIndex(DBHelper.NAME_COl)))
+
                 val intent = Intent(this, MainMenuActivity::class.java)
                 intent.putExtra(Constants.USER_NAME, username.text.toString())
                 startActivity(intent)
@@ -56,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         registerButton.setOnClickListener {
             val intent = Intent(this, SignUpPage::class.java)
             startActivity(intent)
-            finish()
+//            finish()
         }
     }
 }

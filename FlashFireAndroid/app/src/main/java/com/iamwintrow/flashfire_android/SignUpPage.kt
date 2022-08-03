@@ -4,12 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class SignUpPage : AppCompatActivity() {
     lateinit var signupButton: Button
-    lateinit var accountButton: Button
+    lateinit var accountButton: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +37,17 @@ class SignUpPage : AppCompatActivity() {
             } else if (password.text.isEmpty()) {
                 Toast.makeText(this, "Please create a password", Toast.LENGTH_LONG).show()
             } else {
+                val db = DBHelper(this, null)
+
+                val nameStr = name.text.toString()
+                val emailStr = email.text.toString()
+                val usernameStr = username.text.toString()
+                val passwordStr = password.text.toString()
+
+                db.addUser(nameStr, emailStr, usernameStr, passwordStr)
+
+                Toast.makeText(this, "Thanks for signing up " + nameStr + "!", Toast.LENGTH_LONG).show()
+
                 val intent = Intent(this, MainMenuActivity::class.java)
                 intent.putExtra(Constants.SIGNUP_NAME, name.text.toString())
                 intent.putExtra(Constants.SIGNUP_EMAIL, email.text.toString())

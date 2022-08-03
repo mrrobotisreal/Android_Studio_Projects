@@ -7,17 +7,29 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="@drawable/flame_gif_for_flashfire">
+    android:background="@drawable/flame_new">
 
+<!--    <TextView-->
+<!--        android:id="@+id/main_title"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="🔥FLashFire🔥"-->
+<!--        android:paddingTop="25dp"-->
+<!--        android:textSize="25sp"-->
+<!--        android:textStyle="bold|italic"-->
+<!--        android:textColor="@color/orangeRed"-->
+<!--        />-->
     <TextView
         android:id="@+id/main_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="🔥FLashFire🔥"
-        android:paddingTop="25dp"
+        android:layout_marginTop="35dp"
         android:textSize="25sp"
         android:textStyle="bold|italic"
         android:textColor="@color/orangeRed"
+        android:background="@drawable/select_dark_red_title"
+        android:padding="15dp"
         />
 
     <com.google.android.material.card.MaterialCardView
@@ -25,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="90dp"
         android:textColorHint="#7A8089"
         app:cardCornerRadius="30dp"
         app:cardBackgroundColor="@color/darkRed">
@@ -93,17 +105,17 @@
                     android:background="@color/white"
                     android:layout_margin="12dp"
                     />
-                <TextView
-                    android:id="@+id/register_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Want to register? Click here"
-                    android:layout_marginTop="16dp"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textColor="@color/purple_700"/>
             </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/register_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Want to register? Click here"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/purple_700"/>
 <!--            <Button-->
 <!--                android:id="@+id/btnStart"-->
 <!--                android:layout_width="match_parent"-->

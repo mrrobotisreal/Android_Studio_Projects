@@ -6,14 +6,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/flame_gif_for_flashfire">
+    android:gravity="center_horizontal"
+    android:background="@drawable/flame_new">
+    <TextView
+        android:id="@+id/main_menu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔥FLashFire🔥"
+        android:layout_marginTop="35dp"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/orangeRed"
+        android:background="@drawable/select_dark_red_title"
+        android:padding="15dp"
+        />
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:textColorHint="#7A8089"
         app:cardCornerRadius="30dp"
         app:cardBackgroundColor="@color/darkRed">
@@ -52,6 +64,7 @@
                     android:layout_margin="12dp"
                     />
                 <TextView
+                    android:id="@+id/current_collection"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Vietnamese"
@@ -62,6 +75,7 @@
                     android:layout_marginVertical="12dp"
                     />
                 <TextView
+                    android:id="@+id/created_on_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Created on 07/28/2022"
@@ -71,6 +85,7 @@
                     android:textColor="@color/yellow"
                     />
                 <TextView
+                    android:id="@+id/last_viewed_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Last Viewed on 07/28/2022"
@@ -93,6 +108,39 @@
                     android:gravity="center"
                     />
             </LinearLayout>
+            <TextView
+                android:id="@+id/stats_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vietnamese Stats"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/purple_500"
+                android:layout_marginBottom="15dp"
+                />
+            <TextView
+                android:id="@+id/create_new_collection_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create New Collection"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/purple_500"
+                android:layout_marginBottom="15dp"
+                />
+            <TextView
+                android:id="@+id/settings_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/purple_500"
+                android:layout_marginBottom="15dp"
+                />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/logout_button"
                 android:layout_width="wrap_content"
